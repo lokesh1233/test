@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+<style>
+.sapUiSmallMarginblock{
+width:1500px;
+}
+
+</style>
+		<script>
+				sap.ui.localResources("apsolute");
+				var app = new sap.m.App({initialPage:"idview1"});
+				var page = sap.ui.view({id:"idview1", viewName:"apsolute.view", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");
+		</script>
+
+	</head>
+	<style>
+	.absolute{
+	border:1px Solid;
+	verticalScrolling: "Hidden";
+	horizontalScrolling: "Hidden";
+	align:left;
+	},
+	
+     .absolute >div:first-child{
+   
+}     
+          .absolute >div:nth-child(2){
+    height:20px;
+    width:20px;
+    left:-19% !important;
+    margin:0 auto;
+      right:0 !important;
+    position:absolute;
+}  
+          .absolute >div:nth-child(3){
+    left:85%!important;
+    position:absolute;
+    top: 75% !important;
+}      
+     
+     
+     
+     
+      </style>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
